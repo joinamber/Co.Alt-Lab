@@ -15,90 +15,87 @@ const MobiusStrip = () => {
 
       p.setup = () => {
         const canvas = p.createCanvas(window.innerWidth, window.innerHeight, p.WEBGL);
-        // Make sure the canvas is visible and takes up space
         canvas.style('display', 'block');
         canvas.style('position', 'absolute');
         canvas.style('top', '0');
         canvas.style('left', '0');
-        canvas.style('z-index', '1'); // Changed from -10 to 1 to ensure visibility
+        canvas.style('z-index', '1');
       };
 
       p.draw = () => {
-        p.clear(); // Clear the canvas each frame
-        p.background(26, 31, 44, 150); // Less transparent background
+        p.clear();
+        p.background(26, 31, 44, 100); // More transparent background
         p.smooth();
         
-        // More pronounced mouse following
         const targetX = p.mouseX - p.width / 2;
         const targetY = p.mouseY - p.height / 2;
-        mouseX += (targetX - mouseX) * 0.1;
-        mouseY += (targetY - mouseY) * 0.1;
+        mouseX += (targetX - mouseX) * 0.05;
+        mouseY += (targetY - mouseY) * 0.05;
         
-        // Make the strip much larger and more visible
-        p.translate(mouseX * 0.2, mouseY * 0.2, 0);
-        p.rotateX(angle * 0.5);
-        p.rotateY(angle * 0.6);
-        
-        // Much more vibrant visuals
-        p.noFill();
-        p.stroke(255, 135, 245); // Brighter purple color for better visibility
-        p.strokeWeight(8); // Even thicker lines for better visibility
-        
-        // Draw Möbius strip with more detail
-        const detail = 30; // Higher detail for smoother curves
-        for (let i = 0; i < p.TWO_PI; i += p.TWO_PI / detail) {
-          p.beginShape();
-          for (let j = 0; j < p.TWO_PI; j += p.TWO_PI / detail) {
-            const r = 250; // Even larger radius
-            const nx = r * p.cos(j) * p.cos(i / 2);
-            const ny = r * p.sin(j);
-            const nz = r * p.cos(j) * p.sin(i / 2);
-            p.vertex(nx, ny, nz);
-          }
-          p.endShape(p.CLOSE);
-        }
-        
-        // Add a second visual layer with different color for depth
-        p.push();
-        p.stroke(30, 174, 219, 230); // Blue color with less transparency
-        p.strokeWeight(5);
+        p.translate(mouseX * 0.1, mouseY * 0.1, 0);
         p.rotateX(angle * 0.3);
         p.rotateY(angle * 0.4);
         
-        for (let i = 0; i < p.TWO_PI; i += p.TWO_PI / detail) {
-          p.beginShape();
-          for (let j = 0; j < p.TWO_PI; j += p.TWO_PI / detail) {
-            const r = 220; // Slightly smaller radius
-            const nx = r * p.cos(j) * p.cos(i / 2);
-            const ny = r * p.sin(j);
-            const nz = r * p.cos(j) * p.sin(i / 2);
-            p.vertex(nx, ny, nz);
-          }
-          p.endShape(p.CLOSE);
-        }
-        p.pop();
+        // Main Möbius strip with subtle gray
+        p.noFill();
+        p.stroke('#8E9196'); // Neutral gray
+        p.strokeWeight(2);
         
-        // Add a third layer for more visual interest
+        const detail = 50; // Higher detail for smoother curves
+        const u = 1; // Width of the strip
+        
+        for (let t = 0; t < p.TWO_PI; t += p.TWO_PI / detail) {
+          p.beginShape(p.TRIANGLE_STRIP);
+          for (let i = 0; i <= detail; i++) {
+            const phi = (i * p.TWO_PI) / detail;
+            
+            // Möbius strip parametric equations
+            const x = (2 + u * p.cos(phi / 2)) * p.cos(phi);
+            const y = (2 + u * p.cos(phi / 2)) * p.sin(phi);
+            const z = u * p.sin(phi / 2);
+            
+            p.vertex(x * 100, y * 100, z * 100);
+            
+            const phi2 = ((i + 1) * p.TWO_PI) / detail;
+            const x2 = (2 + u * p.cos(phi2 / 2)) * p.cos(phi2);
+            const y2 = (2 + u * p.cos(phi2 / 2)) * p.sin(phi2);
+            const z2 = u * p.sin(phi2 / 2);
+            
+            p.vertex(x2 * 100, y2 * 100, z2 * 100);
+          }
+          p.endShape();
+        }
+        
+        // Secondary subtle layer
         p.push();
-        p.stroke(255, 255, 255, 200); // White color with less transparency
-        p.strokeWeight(3);
-        p.rotateX(angle * 0.7);
-        p.rotateY(angle * 0.8);
+        p.stroke('#F1F0FB'); // Soft gray
+        p.strokeWeight(1);
+        p.rotateX(angle * 0.2);
+        p.rotateY(angle * 0.3);
         
-        for (let i = 0; i < p.TWO_PI; i += p.TWO_PI / detail) {
-          p.beginShape();
-          for (let j = 0; j < p.TWO_PI; j += p.TWO_PI / detail) {
-            const r = 190; // Even smaller radius
-            const nx = r * p.cos(j) * p.cos(i / 2);
-            const ny = r * p.sin(j);
-            const nz = r * p.cos(j) * p.sin(i / 2);
-            p.vertex(nx, ny, nz);
+        for (let t = 0; t < p.TWO_PI; t += p.TWO_PI / detail) {
+          p.beginShape(p.TRIANGLE_STRIP);
+          for (let i = 0; i <= detail; i++) {
+            const phi = (i * p.TWO_PI) / detail;
+            
+            const x = (1.8 + u * p.cos(phi / 2)) * p.cos(phi);
+            const y = (1.8 + u * p.cos(phi / 2)) * p.sin(phi);
+            const z = u * p.sin(phi / 2);
+            
+            p.vertex(x * 100, y * 100, z * 100);
+            
+            const phi2 = ((i + 1) * p.TWO_PI) / detail;
+            const x2 = (1.8 + u * p.cos(phi2 / 2)) * p.cos(phi2);
+            const y2 = (1.8 + u * p.cos(phi2 / 2)) * p.sin(phi2);
+            const z2 = u * p.sin(phi2 / 2);
+            
+            p.vertex(x2 * 100, y2 * 100, z2 * 100);
           }
-          p.endShape(p.CLOSE);
+          p.endShape();
         }
         p.pop();
         
-        angle += 0.01;
+        angle += 0.005; // Slower rotation
       };
 
       p.windowResized = () => {
@@ -114,7 +111,7 @@ const MobiusStrip = () => {
     <div 
       ref={sketchRef} 
       className="absolute inset-0 w-full h-full" 
-      style={{ zIndex: 1 }} // Changed from -10 to 1 to ensure visibility
+      style={{ zIndex: 1 }}
     />
   );
 };
