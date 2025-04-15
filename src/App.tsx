@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Process from "./pages/Process"; 
 import NotFound from "./pages/NotFound";
 import MobiusTest from "./pages/MobiusTest";
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/projects/*" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/process" element={<Process />} />
           <Route path="/mobius-test" element={<MobiusTest />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
