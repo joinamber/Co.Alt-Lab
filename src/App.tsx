@@ -8,7 +8,9 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Process from "./pages/Process"; 
+import Process from "./pages/Process";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import MobiusTest from "./pages/MobiusTest";
 
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/projects/*" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/process" element={<Process />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="/mobius-test" element={<MobiusTest />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
