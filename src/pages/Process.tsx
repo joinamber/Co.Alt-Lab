@@ -11,50 +11,45 @@ const Process = () => {
         <div className="max-w-3xl mx-auto">
           <h1 className="text-5xl font-bold mb-8 bg-gradient-to-r from-[#9b87f5] to-[#1EAEDB] bg-clip-text text-transparent">Our Process</h1>
           
-          <div className="text-xl text-gray-300 mb-12 space-y-8">
-            <p>
-              At Co.Alt Lab, we test intentionally. We prototype publicly. 
-              Our process is human-first, not model-first.
-            </p>
-            
-            <p>
-              Inspired by design thinkers like Jony Ive and Naoto Fukasawa, 
-              we believe in simplicity, intentionality, and human-centered design principles.
+          <div className="text-xl text-gray-300 mb-12">
+            <p className="mb-8">
+              At Co.Alt Lab, we blend rapid iteration with creative exploration to build technology that truly serves people. Inspired by the accelerator mindset of Y Combinator and the interdisciplinary, experimental spirit of the MIT Media Lab, our process is both agile and rigorous:
             </p>
           </div>
           
-          <div className="space-y-12 mt-16">
+          <div className="space-y-12">
             <div className="border-l-4 border-[#9b87f5] pl-6">
-              <h3 className="text-2xl font-semibold mb-4 text-[#9b87f5]">Research & Discovery</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-[#9b87f5]">1. Discovery & Ideation</h3>
               <p className="text-gray-300">
-                We begin each project with thorough research to understand the problem space,
-                user needs, and existing solutions. We use a combination of qualitative and 
-                quantitative research methods to gather insights.
+                We start by deeply understanding user needs and context, bringing together designers, engineers, and thought leaders to brainstorm bold ideas and identify opportunities for human-first innovation.
               </p>
             </div>
             
             <div className="border-l-4 border-[#33C3F0] pl-6">
-              <h3 className="text-2xl font-semibold mb-4 text-[#33C3F0]">Ideation & Prototyping</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-[#33C3F0]">2. Rapid Prototyping & Experimentation</h3>
               <p className="text-gray-300">
-                We generate multiple concepts and prototypes to explore different approaches.
-                We believe in rapid prototyping to test ideas quickly and gather feedback early.
+                Leveraging lean, iterative cycles, we quickly build prototypes and test ideas in real-world scenarios. This allows us to learn fast, validate concepts early, and pivot as needed—similar to the fast iteration loops championed by Y Combinator.
               </p>
             </div>
             
             <div className="border-l-4 border-[#9b87f5] pl-6">
-              <h3 className="text-2xl font-semibold mb-4 text-[#9b87f5]">Design & Development</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-[#9b87f5]">3. Collaborative Refinement</h3>
               <p className="text-gray-300">
-                Our design process is iterative and collaborative. We work closely with clients
-                and users to refine our solutions. We focus on creating experiences that are
-                both functional and delightful.
+                Through open workshops and public feedback, we refine our prototypes using continuous, interdisciplinary collaboration. Much like the MIT Media Lab's model, our approach fosters cross-domain creativity and transparency.
               </p>
             </div>
             
             <div className="border-l-4 border-[#33C3F0] pl-6">
-              <h3 className="text-2xl font-semibold mb-4 text-[#33C3F0]">Testing & Validation</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-[#33C3F0]">4. Practical Integration</h3>
               <p className="text-gray-300">
-                We rigorously test our solutions with real users to validate our assumptions
-                and identify areas for improvement. We believe in continuous testing and iteration.
+                Once validated, ideas are scaled into robust solutions through agile methodologies, ensuring that each innovation is both cutting-edge and practical enough to address real challenges.
+              </p>
+            </div>
+
+            <div className="border-l-4 border-[#9b87f5] pl-6">
+              <h3 className="text-2xl font-semibold mb-4 text-[#9b87f5]">5. Continuous Learning</h3>
+              <p className="text-gray-300">
+                Our process is an ongoing loop of discovery, prototyping, and refinement. By staying open to new insights and adapting quickly, we ensure that our work always evolves to meet changing human needs.
               </p>
             </div>
           </div>

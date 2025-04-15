@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -176,16 +175,19 @@ const MobiusStrip = () => {
     
     window.addEventListener('mousemove', onMouseMove);
     
-    // Handle window resize
+    // Update container size to not overlap with scrollbar
     const handleResize = () => {
       if (!containerRef.current) return;
       
-      camera.aspect = window.innerWidth / window.innerHeight;
+      const width = window.innerWidth - 20; // Leave space for scrollbar
+      const height = window.innerHeight;
+      camera.aspect = width / height;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(width, height);
     };
     
     window.addEventListener('resize', handleResize);
+    handleResize(); // Call initially
     
     // Cleanup function
     return () => {
@@ -200,7 +202,7 @@ const MobiusStrip = () => {
   return (
     <div 
       ref={containerRef}
-      className="absolute inset-0 w-full h-full"
+      className="absolute inset-0 w-[calc(100%-20px)] h-full" // Leave space for scrollbar
       style={{ zIndex: 1 }}
     />
   );
