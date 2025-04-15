@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MobiusStrip from './MobiusStrip';
 
 const HeroSection = () => {
@@ -14,12 +15,16 @@ const HeroSection = () => {
           Exploring the intersections of technology, design, and innovation
         </p>
         <div className="flex justify-center space-x-4">
-          <button className="bg-gradient px-6 py-2 rounded-md text-white hover:opacity-90 transition">
-            Explore Projects
-          </button>
-          <button className="border border-[#9b87f5] px-6 py-2 rounded-md text-white hover:bg-[#9b87f5]/10 transition">
-            Contact Us
-          </button>
+          <Link to="/projects">
+            <button className="bg-gradient px-6 py-2 rounded-md text-white hover:opacity-90 transition">
+              Explore Projects
+            </button>
+          </Link>
+          <Link to="/contact">
+            <button className="border border-[#9b87f5] px-6 py-2 rounded-md text-white hover:bg-[#9b87f5]/10 transition">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </div>
     </div>
