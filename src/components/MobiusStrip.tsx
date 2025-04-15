@@ -20,12 +20,12 @@ const MobiusStrip = () => {
         canvas.style('position', 'absolute');
         canvas.style('top', '0');
         canvas.style('left', '0');
-        canvas.style('z-index', '-10');
+        canvas.style('z-index', '1'); // Changed from -10 to 1 to ensure visibility
       };
 
       p.draw = () => {
         p.clear(); // Clear the canvas each frame
-        p.background(26, 31, 44, 200); // Semi-transparent background
+        p.background(26, 31, 44, 150); // Less transparent background
         p.smooth();
         
         // More pronounced mouse following
@@ -41,15 +41,15 @@ const MobiusStrip = () => {
         
         // Much more vibrant visuals
         p.noFill();
-        p.stroke(155, 135, 245); // Purple color matching the brand
-        p.strokeWeight(5); // Much thicker lines for better visibility
+        p.stroke(255, 135, 245); // Brighter purple color for better visibility
+        p.strokeWeight(8); // Even thicker lines for better visibility
         
         // Draw Möbius strip with more detail
         const detail = 30; // Higher detail for smoother curves
         for (let i = 0; i < p.TWO_PI; i += p.TWO_PI / detail) {
           p.beginShape();
           for (let j = 0; j < p.TWO_PI; j += p.TWO_PI / detail) {
-            const r = 200; // Much larger radius
+            const r = 250; // Even larger radius
             const nx = r * p.cos(j) * p.cos(i / 2);
             const ny = r * p.sin(j);
             const nz = r * p.cos(j) * p.sin(i / 2);
@@ -60,15 +60,15 @@ const MobiusStrip = () => {
         
         // Add a second visual layer with different color for depth
         p.push();
-        p.stroke(30, 174, 219, 200); // Blue color for contrast with some transparency
-        p.strokeWeight(3);
+        p.stroke(30, 174, 219, 230); // Blue color with less transparency
+        p.strokeWeight(5);
         p.rotateX(angle * 0.3);
         p.rotateY(angle * 0.4);
         
         for (let i = 0; i < p.TWO_PI; i += p.TWO_PI / detail) {
           p.beginShape();
           for (let j = 0; j < p.TWO_PI; j += p.TWO_PI / detail) {
-            const r = 180; // Slightly smaller radius
+            const r = 220; // Slightly smaller radius
             const nx = r * p.cos(j) * p.cos(i / 2);
             const ny = r * p.sin(j);
             const nz = r * p.cos(j) * p.sin(i / 2);
@@ -80,15 +80,15 @@ const MobiusStrip = () => {
         
         // Add a third layer for more visual interest
         p.push();
-        p.stroke(255, 255, 255, 150); // White color with transparency
-        p.strokeWeight(1.5);
+        p.stroke(255, 255, 255, 200); // White color with less transparency
+        p.strokeWeight(3);
         p.rotateX(angle * 0.7);
         p.rotateY(angle * 0.8);
         
         for (let i = 0; i < p.TWO_PI; i += p.TWO_PI / detail) {
           p.beginShape();
           for (let j = 0; j < p.TWO_PI; j += p.TWO_PI / detail) {
-            const r = 160; // Even smaller radius
+            const r = 190; // Even smaller radius
             const nx = r * p.cos(j) * p.cos(i / 2);
             const ny = r * p.sin(j);
             const nz = r * p.cos(j) * p.sin(i / 2);
@@ -114,7 +114,7 @@ const MobiusStrip = () => {
     <div 
       ref={sketchRef} 
       className="absolute inset-0 w-full h-full" 
-      style={{ zIndex: -10 }} 
+      style={{ zIndex: 1 }} // Changed from -10 to 1 to ensure visibility
     />
   );
 };
