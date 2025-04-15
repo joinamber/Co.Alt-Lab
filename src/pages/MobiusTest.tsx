@@ -8,7 +8,7 @@ const MobiusTest = () => {
       <MobiusStrip />
       <div className="relative z-10 p-4">
         <h1 className="text-2xl font-bold text-white">Möbius Strip Test Page</h1>
-        <p className="text-white">You should see a colorful Möbius strip animation behind this text.</p>
+        <p className="text-white">Interact with the Möbius strip: click and drag to rotate, scroll to zoom.</p>
       </div>
     </div>
   );
