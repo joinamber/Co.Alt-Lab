@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { ParametricGeometry } from 'three/examples/jsm/geometries/ParametricGeometry.js';
 
 const MobiusStrip = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -64,7 +65,8 @@ const MobiusStrip = () => {
         target.set(x, y, z);
       };
       
-      const geometry = new THREE.ParametricGeometry(
+      // Use imported ParametricGeometry instead of THREE.ParametricGeometry
+      const geometry = new ParametricGeometry(
         mobiusFunction,
         segments,
         segments / 4
