@@ -44,7 +44,7 @@ export const projects: Project[] = [
     description: "Authenticating AI agents for secure transactions and delegated action — the trust layer for an agentic future.",
     category: "Business Enablers",
     icon: Wrench,
-    projectUrl: "https://drive.google.com/file/d/1nMxBx87u9XxVgDPrLx9iE3Eo2eajlg7-/view?usp=sharing",
+    projectUrl: "https://know-your-agent-now.lovable.app/",
     screenshot: "/lovable-uploads/a87bb7b5-86cd-489e-bb89-b63dad59f4c4.png",
   },
 ];
