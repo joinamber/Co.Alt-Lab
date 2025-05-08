@@ -16,8 +16,9 @@ const Terms = () => {
           
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
-            <p className="text-gray-300">1.1. By accessing or using the Co.Alt Lab website and software, you agree to be bound by these Terms of Service and all applicable Singaporean and international laws.</p>
-            <p className="text-gray-300">1.2. If you do not agree with any part of these Terms, please refrain from using our services.</p>
+            <p className="text-gray-300">1.1. This Agreement is entered into by Adaptive Intelligence Pte. Ltd., a Singapore company, acting through its Co.Alt Lab division (‘Adaptive Intelligence’).</p>
+            <p className="text-gray-300">1.2. By accessing or using the Co.Alt Lab website and software, you agree to be bound by these Terms of Service and all applicable Singaporean and international laws.</p>
+            <p className="text-gray-300">1.3. If you do not agree with any part of these Terms, please refrain from using our services.</p>
           </section>
 
           <section className="mb-8">
