@@ -12,6 +12,7 @@ const About = () => {
           <p className="text-xl text-gray-300">
             Co.Alt Lab is a pioneering technology studio at the intersection of innovation and design.
             We specialize in creating cutting-edge solutions that push the boundaries of what's possible.
+            Co.Alt Lab is a division of Adaptive Intelligence Pte. Ltd.
           </p>
         </div>
       </div>
