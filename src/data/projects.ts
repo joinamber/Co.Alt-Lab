@@ -1,5 +1,5 @@
 
-import { Brain, Package, Podcast, Wrench, Brush } from "lucide-react";
+import { Brain, Package, Podcast, Wrench, Brush, Sprout } from "lucide-react";
 
 export interface Project {
   id: string;
@@ -56,5 +56,14 @@ export const projects: Project[] = [
     icon: Brush,
     projectUrl: "https://vibecraft.coaltlab.com/",
     screenshot: "/lovable-uploads/7e75da8c-94c5-4e1b-841c-a7e61a64c83f.png",
+  },
+  {
+    id: "dayofaisingapore",
+    title: "Day of AI Singapore",
+    description: "AI Education for Bold Young Learners.",
+    category: "Learning & Education",
+    icon: Sprout,
+    projectUrl: "https://www.dayofaisingapore.com/",
+    screenshot: "/lovable-uploads/494cf410-3ee5-4ece-8c3d-79f625d67e8a.png",
   },
 ];
