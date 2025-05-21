@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     id: "dayofaisingapore",
     title: "Day of AI Singapore",
-    description: "AI Education for Bold Young Learners.",
+    description: "AI Education for Bold Young Learners, powered by MIT RAISE & i2 Learning.",
     category: "Learning & Education",
     icon: Sprout,
     projectUrl: "https://www.dayofaisingapore.com/",
