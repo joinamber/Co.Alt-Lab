@@ -1,5 +1,5 @@
 
-import { Brain, Package, Podcast, Wrench } from "lucide-react";
+import { Brain, Package, Podcast, Wrench, Brush } from "lucide-react";
 
 export interface Project {
   id: string;
@@ -47,5 +47,14 @@ export const projects: Project[] = [
     icon: Wrench,
     projectUrl: "https://kyan.coaltlab.com/",
     screenshot: "/lovable-uploads/a87bb7b5-86cd-489e-bb89-b63dad59f4c4.png",
+  },
+  {
+    id: "vibecraft",
+    title: "VibeCraft",
+    description: "Cohort-based learning to bring your ideas to life, no coding skill required.",
+    category: "Learning & Education",
+    icon: Brush,
+    projectUrl: "https://vibecraft.coaltlab.com/",
+    screenshot: "/lovable-uploads/7e75da8c-94c5-4e1b-841c-a7e61a64c83f.png",
   },
 ];
