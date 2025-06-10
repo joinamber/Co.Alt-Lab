@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'gordita': ['Gordita', 'sans-serif'],
+				'gordita': ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
