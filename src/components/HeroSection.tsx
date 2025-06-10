@@ -8,7 +8,7 @@ const HeroSection = () => {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <MobiusStrip />
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#33C3F0] to-[#0FA0CE] bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-7xl font-gordita font-bold mb-6 bg-gradient-to-r from-[#33C3F0] to-[#0FA0CE] bg-clip-text text-transparent">
           Co.Alt Lab
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
