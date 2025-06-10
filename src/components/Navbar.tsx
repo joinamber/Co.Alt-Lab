@@ -30,8 +30,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-[#9b87f5] to-[#1EAEDB] bg-clip-text text-transparent">
-              Co.Alt Lab
+            <Link to="/" className="block">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/698ed558-e586-4c86-8abf-ab01bc25fca3.png" 
+                  alt="Co.Alt Lab" 
+                  className="h-8 w-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#9b87f5] to-[#1EAEDB] opacity-20 mix-blend-overlay rounded"></div>
+              </div>
             </Link>
           </div>
 
