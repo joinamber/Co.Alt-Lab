@@ -11,8 +11,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8 border-b border-gray-800">
           <div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#9b87f5] to-[#1EAEDB] bg-clip-text text-transparent">
-              Co.Alt Lab
+            <h3 className="text-2xl font-gordita font-black mb-4 bg-gradient-to-r from-[#9b87f5] to-[#1EAEDB] bg-clip-text text-transparent">
+              co.alt lab
             </h3>
             <p className="text-gray-400 mb-6 max-w-md">
               Exploring the intersections of technology, design, and innovation to create AI-powered
