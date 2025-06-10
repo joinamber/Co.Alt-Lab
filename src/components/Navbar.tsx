@@ -39,16 +39,16 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               <Link to="/about">
-                <Button variant="ghost" className="text-gray-300 hover:text-white">About</Button>
+                <Button variant="ghost" className="text-gray-300">About</Button>
               </Link>
               <Link to="/projects">
-                <Button variant="ghost" className="text-gray-300 hover:text-white">Projects</Button>
+                <Button variant="ghost" className="text-gray-300">Projects</Button>
               </Link>
               <Link to="/process">
-                <Button variant="ghost" className="text-gray-300 hover:text-white">Our Process</Button>
+                <Button variant="ghost" className="text-gray-300">Our Process</Button>
               </Link>
               <Link to="/contact">
-                <Button variant="ghost" className="text-gray-300 hover:text-white">Contact</Button>
+                <Button variant="ghost" className="text-gray-300">Contact</Button>
               </Link>
             </div>
           </div>
@@ -72,16 +72,16 @@ const Navbar = () => {
         <div className="md:hidden bg-[#1A1F2C] bg-opacity-95 backdrop-blur-sm">
           <div className="px-4 pt-2 pb-4 space-y-2">
             <Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button variant="ghost" className="w-full text-left text-gray-300 hover:text-white">About</Button>
+              <Button variant="ghost" className="w-full text-left text-gray-300">About</Button>
             </Link>
             <Link to="/projects" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button variant="ghost" className="w-full text-left text-gray-300 hover:text-white">Projects</Button>
+              <Button variant="ghost" className="w-full text-left text-gray-300">Projects</Button>
             </Link>
             <Link to="/process" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button variant="ghost" className="w-full text-left text-gray-300 hover:text-white">Our Process</Button>
+              <Button variant="ghost" className="w-full text-left text-gray-300">Our Process</Button>
             </Link>
             <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button variant="ghost" className="w-full text-left text-gray-300 hover:text-white">Contact</Button>
+              <Button variant="ghost" className="w-full text-left text-gray-300">Contact</Button>
             </Link>
           </div>
         </div>
