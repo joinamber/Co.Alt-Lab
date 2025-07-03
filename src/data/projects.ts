@@ -14,7 +14,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "hyperpersona",
-    title: "Hyperpersona",
+    title: "HyperPersona",
     description: "Mapping human decision patterns through AI-driven behavioral segmentation.",
     category: "Behavioral Systems",
     icon: Brain,
