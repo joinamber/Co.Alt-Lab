@@ -1,5 +1,5 @@
 
-import { Brain, Package, Podcast, Wrench, Brush, Sprout, Cart } from "lucide-react";
+import { Brain, Package, Podcast, Wrench, Brush, Sprout, ShoppingCart } from "lucide-react";
 
 export interface Project {
   id: string;
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     title: "Agentic Catalog Management",
     description: "Agentic eCommerce uses AI to automatically categorize, tag, and enrich your product listings for every platform.",
     category: "Agentic Commerce",
-    icon: Cart,
+    icon: ShoppingCart,
     projectUrl: "https://agenticommerce.coaltlab.com/",
     screenshot: "/lovable-uploads/a87bb7b5-86cd-489e-bb89-b63dad59f4c4.png",
   },
