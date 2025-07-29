@@ -1,5 +1,5 @@
 
-import { Brain, Package, Podcast, Wrench, Brush, Sprout } from "lucide-react";
+import { Brain, Package, Podcast, Wrench, Brush, Sprout, Cart } from "lucide-react";
 
 export interface Project {
   id: string;
