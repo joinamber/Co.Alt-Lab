@@ -14,7 +14,7 @@ const ProjectList = () => {
   }, {} as Record<string, typeof projects>);
 
   // Get unique categories
-  const categories = Object.keys(projectsByCategory);
+  const categories = Object.keys(projectsByCategory).sort();
 
   return (
     <div>
